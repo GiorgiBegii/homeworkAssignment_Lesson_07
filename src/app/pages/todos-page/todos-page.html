@@ -1,0 +1,8 @@
+<h1>Top 10 Todos</h1>
+<ul>
+  <li *ngFor="let todo of todos$ | async">
+    <a [routerLink]="['/todos', todo.id]">
+      {{ todo.id }} - {{ todo.title }} [{{ todo.completed ? '✔' : '❌' }}]
+    </a>
+  </li>
+</ul>
