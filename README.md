@@ -1,59 +1,39 @@
-# HomeworkAssignmentLesson06
+# homeworkAssignment_Lesson_03 / [Live](https://homework-assignment-lesson-03.vercel.app/)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.3.
+## Features:
 
-## Development server
+● Introduce a routing the Angular app with 4 routes: /home (default one), /todos, /todos/:id, /weekend-party
+Add a header with links to 3 pages: home, todo and weekend-party (with routerLink and routerLinkActive)
+home page contains two buttons “Todo” and “Weekend” that redirect the user to an appropriate page from TS logic
+todos page should render todos list (10 items) (https://jsonplaceholder.typicode.com/todos). If todo is cllicked the 
+/todos/:id page is opened. It should load a certain todo data from https://jsonplaceholder.typicode.com/todos/:id, get 
+the id from the route details.
+weekend (lazy loaded) page shows just some static text and should be protected with guard to be accessible only 
+during the weekend. Show in any way the message if currently this page is not available and redirect the user to home
+[optional] “Weekend” button should add bypass=true query parameter that will force the guard to allow access even if 
+it’s not a weekend now
 
-To start a local development server, run:
+**Folder Structure:**
 
-```bash
-ng serve
-```
+src/[app/](https://github.com/GiorgiBegii/homeworkAssignment_Lesson_07/tree/main/src/app)  
+├─ [pages/](https://github.com/GiorgiBegii/homeworkAssignment_Lesson_07/tree/main/src/app/pages)  
+│  ├─ [home-page/](https://github.com/GiorgiBegii/homeworkAssignment_Lesson_07/tree/main/src/app/pages/home-page)  
+│  │  ├─ home-page.component.ts  
+│  │  ├─ home-page.component.html  
+│  │  ├─ home-page.component.scss  
+│  ├─ [todo-page/](https://github.com/GiorgiBegii/homeworkAssignment_Lesson_07/tree/main/src/app/pages/todo-page)  
+│  │  ├─ todo-page.component.ts  
+│  │  ├─ todo-page.component.html  
+│  │  ├─ todo-page.component.scss  
+│  ├─ [todos-page/](https://github.com/GiorgiBegii/homeworkAssignment_Lesson_07/tree/main/src/app/pages/todos-page)  
+│  │  ├─ todos-page.component.ts  
+│  │  ├─ todos-page.component.html  
+│  │  ├─ todos-page.component.scss  
+│  ├─ [weekend-party-page/](https://github.com/GiorgiBegii/homeworkAssignment_Lesson_07/tree/main/src/app/pages/weekend-party-page)  
+│     ├─ weekend-party-page.component.ts  
+│     ├─ weekend-party-page.component.html  
+│     ├─ weekend-party-page.component.scss  
+├─ [services/](https://github.com/GiorgiBegii/homeworkAssignment_Lesson_07/tree/main/src/app/services)  
+│  ├─ todo-service.ts  
+│  ├─ weekend.guard.ts  
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
